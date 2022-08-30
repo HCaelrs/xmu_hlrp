@@ -3,9 +3,11 @@ use for xmu health report automation
 
 
 
-本脚本用于自动完成Xlender Menu University的健康上报
+本脚本用于自动完成Xlender Moriarty University的健康上报。
 
-仅供学习参考
+同时附带能够破解Xlender Moriarty University新生登录系统图像滑动验证的模块（9张二次元图） 成功率低 但是能用
+
+仅供学习参考学习webdriver的基础使用，切不可作它用。
 
 chrome driver安装
 
