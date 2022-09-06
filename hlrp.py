@@ -88,14 +88,14 @@ def health_report(sid, pwd, eml, sandbox):
 
         url = 'https://ids.xmu.edu.cn/authserver/login?service=https://xmuxg.xmu.edu.cn/login/cas/xmu'
         driver.get(url)
-        time.sleep(1)
+        time.sleep(4)
 
         username = driver.find_element(By.ID, 'username')
         password = driver.find_element(By.ID, 'password')
         username.send_keys(sid)
         password.send_keys(pwd)
         password.send_keys(Keys.ENTER)
-        time.sleep(1)
+        time.sleep(4)
         divs = driver.find_elements(By.TAG_NAME, "div")
         needed_div = None
         for div in divs:
@@ -105,7 +105,7 @@ def health_report(sid, pwd, eml, sandbox):
         needed_div.click()
 
         # choose my form
-        time.sleep(2)
+        time.sleep(4)
         driver.switch_to.window(driver.window_handles[1])
         div_tags = driver.find_elements(By.TAG_NAME, "div")
         my_form = None
@@ -115,7 +115,7 @@ def health_report(sid, pwd, eml, sandbox):
                 break
         my_form.click()
 
-        time.sleep(1)
+        time.sleep(3)
         choose = []
         last_time = None
         spans = driver.find_elements(By.TAG_NAME, "span")
@@ -155,14 +155,13 @@ def health_report(sid, pwd, eml, sandbox):
             # accept the alert
             driver.switch_to.alert.accept()
             print("alert accepted")
+
             if send_email(eml, "health report success!", "report success"):
                 print("send_mail success")
         driver.close()
         print("driver closed")
         return True
     except Exception as e:
-        if send_email(eml, e.__str__(), "report error"):
-            print("send_mail success")
         print(e)
         return False
 
@@ -170,4 +169,12 @@ def health_report(sid, pwd, eml, sandbox):
 if __name__ == "__main__":
     for user in USERS:
         print("start " + user["id"])
-        health_report(user["id"], user["password"], user["email"], sandbox=SANDBOX)
+        scs = False
+        for i in range(5):
+            if health_report(user["id"], user["password"], user["email"], sandbox=SANDBOX):
+                scs = True
+                break
+        if not scs:
+            if send_email("health report error!", "report error!"):
+                print("send_mail success")
+        print("exit")
