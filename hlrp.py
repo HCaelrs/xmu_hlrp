@@ -14,12 +14,8 @@ USERS = [
 
 import re
 import time
-import base64
 import random
 import smtplib
-import numpy as np
-from PIL import Image
-from io import BytesIO
 from datetime import datetime
 from selenium import webdriver
 from email.header import Header
