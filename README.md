@@ -14,7 +14,7 @@ chrome driver安装
 ```bash
 # 安装浏览器
 curl https://intoli.com/install-google-chrome.sh | bash
-ldd /opt/google/chrome/chrome | grep "not found”
+ldd /opt/google/chrome/chrome | grep "not found"
 google-chrome-stable --no-sandbox --headless --disable-gpu --screenshot https://www.baidu.com
 
 # 安装chromedriver
