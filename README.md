@@ -8,6 +8,7 @@ use for xmu health report automation
 同时附带能够破解Xlender Moriarty University新生登录系统图像滑动验证的模块（9张二次元图） 成功率低 但是能用
 
 仅供学习参考学习webdriver的基础使用，切不可作它用。
+## centos 安装
 
 chrome driver安装
 
@@ -39,6 +40,33 @@ driver.get("https://www.baidu.com”)
 print(driver.page_source)
 ```
 
+
+
+
+
+## windows安装
+
+1. 安装chromedriver
+
+   [Chromedriver的安装教程 - 谜语+ - 博客园 (cnblogs.com)](https://www.cnblogs.com/022414ls/p/15171863.html)
+
+   添加完环境变量之后重启，进入cmd进行测试chromedriver。
+
+2. 安装selenium
+
+3. 在selenium中测试webdriver
+
+   ```python
+   from selenium import webdriver
+   webdriver.Chrome()
+   ```
+
+   看到有浏览器打开就能算成功	
+
+
+
+## 运行
+
 在代码开头对于一些项目进行配置
 
 ```python
@@ -64,6 +92,4 @@ USERS = [
 ```
 
 如果是需要滑动验证码进行验证（freshmen_pic_auth），请运行pics文件夹中的all_use（由于numpy版本不同会导致不兼容的问题）。之后记得在文件中修改输入的用户名和密码。
-
-
 
