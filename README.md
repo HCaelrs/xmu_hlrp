@@ -93,3 +93,25 @@ USERS = [
 
 如果是需要滑动验证码进行验证（freshmen_pic_auth），请运行pics文件夹中的all_use（由于numpy版本不同会导致不兼容的问题）。之后记得在文件中修改输入的用户名和密码。
 
+
+
+## supervise_demo
+
+通过这个脚本可以以班委身份对于班级学生的打卡情况进行监测。检测到没有打卡的同学，通过邮件发送学生信息给指定的邮箱。
+
+在代码开头对于其中登录的班委的信息以及接收未打卡学生信息的邮箱进行配置。
+
+其中发送邮件的邮箱信息同健康打卡的信息。
+
+```python
+SID = "3************7"
+PWD = "W*********1"
+EMAIL = "1**********@qq.com"
+
+SERVERNAME = "SUPERvise_ROBOT 2022-09-beta"
+MAIL_HOST = "smtp.qq.com"       # 设置服务器
+MAIL_USER = "2********4"        # 用户名
+MAIL_PASS = "lfjilqyhgdhbcffi"  # 口令
+SENDER = "2********4@qq.com"    # 发送邮箱
+```
+
