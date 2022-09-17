@@ -64,7 +64,7 @@ if __name__ == "__main__":
     try:
         chrome_options = Options()
         if not SANDBOX:
-            chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的报错
+            chrome_options.add_argument('--no-sandbox')derivatives  # 解决DevToolsActivePort文件不存在的报错
             chrome_options.add_argument('window-size=1920x3000')  # 指定浏览器分辨率
             chrome_options.add_argument('--hide-scrollbars')  # 隐藏滚动条, 应对一些特殊页面
             chrome_options.add_argument('--headless')

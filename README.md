@@ -5,7 +5,9 @@ use for xmu health report automation
 
 本脚本用于自动完成Xlender Moriarty University的健康上报。
 
-同时附带能够破解Xlender Moriarty University新生登录系统图像滑动验证的模块（9张二次元图） 成功率低 但是能用
+~~同时附带能够破解Xlender Moriarty University新生登录系统图像滑动验证的模块（9张二次元图） 成功率低 但是能用~~
+
+**目前网页经过更新之后替换掉了原来的二次元图 使用了风景的图片 该功能暂时无法使用 如需使用需要再图片路径中自行更改图片 以及每一个test中分割线的位置**
 
 仅供学习参考学习webdriver的基础使用，切不可作它用。
 ## centos 安装
