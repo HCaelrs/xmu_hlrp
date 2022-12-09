@@ -1,15 +1,31 @@
 # xmu_hlrp
-use for xmu health report automation
+
+青春才几年 疫情占三年
+
+健康打卡完成了它的使命 感谢之前用我脚本打卡的同学还有朋友
+
+希望疫情能够尽快过去 希望大家尽快能够过上疫情前的生活
+
+这也是本项目最后一次更新 peace and love
+
+![57e1302012a88b483551e747c7b1a4af](https://user-images.githubusercontent.com/53749904/206694860-f42d8592-2b37-49c5-911e-ed016f3bff9a.jpg)
 
 
 
-本脚本用于自动完成Xlender Moriarty University的健康上报。
+
+~~use for xmu health report automation~
+
+
+
+~~本脚本用于自动完成Xlender Moriarty University的健康上报。~~
 
 ~~同时附带能够破解Xlender Moriarty University新生登录系统图像滑动验证的模块（9张二次元图） 成功率低 但是能用~~
 
 **目前网页经过更新之后替换掉了原来的二次元图 使用了风景的图片 该功能暂时无法使用 如需使用需要再图片路径中自行更改图片 以及每一个test中分割线的位置**
 
-仅供学习参考学习webdriver的基础使用，切不可作它用。
+~~仅供学习参考学习webdriver的基础使用，切不可作它用。~~
+
+
 ## centos 安装
 
 chrome driver安装
